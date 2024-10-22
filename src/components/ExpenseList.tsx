@@ -14,10 +14,12 @@ const ExpenseList = ({ expenses, onDelete }: Props) => {
   return (
     <table className="table table-bordered">
       <thead>
-        <th>Item</th>
-        <th>Amount</th>
-        <th>Category</th>
-        <th></th>
+        <tr>
+          <th>Item</th>
+          <th>Amount</th>
+          <th>Category</th>
+          <th></th>
+        </tr>
       </thead>
       <tbody>
         {expenses.map((expense) => (
@@ -37,14 +39,16 @@ const ExpenseList = ({ expenses, onDelete }: Props) => {
         ))}
       </tbody>
       <tfoot>
-        <th>Total</th>
-        <th>
-          {expenses
-            .reduce((curr, expense) => curr + expense.amount, 0)
-            .toFixed(2)}
-        </th>
-        <th></th>
-        <th></th>
+        <tr>
+          <th>Total</th>
+          <th>
+            {expenses
+              .reduce((curr, expense) => curr + expense.amount, 0)
+              .toFixed(2)}
+          </th>
+          <th></th>
+          <th></th>
+        </tr>
       </tfoot>
     </table>
   );
