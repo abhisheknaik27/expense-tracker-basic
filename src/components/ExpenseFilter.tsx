@@ -8,8 +8,6 @@ const ExpenseFilter = ({ onSelectCategory }: Props) => {
   return (
     <div className="mb-3">
       <select
-        name=""
-        id=""
         className="form-select"
         onChange={(e) => onSelectCategory(e.target.value)}
       >

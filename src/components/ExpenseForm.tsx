@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 const schema = z.object({
   item: z
     .string()
-    .min(3, { message: "Minimum 3 and maximum 100 characters" })
+    .min(1, { message: "Minimum 1 and maximum 100 characters" })
     .max(100),
   amount: z
     .number({ invalid_type_error: "Amount Required" })
